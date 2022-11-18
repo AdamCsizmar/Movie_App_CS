@@ -31,17 +31,17 @@ export const MovieModal = (props: IMovieModal) => {
   };
 
   useEffect(() => {
-    const fetchMovieData = async (title: string, date: string) => {
-      const searchTitle = title.replaceAll(' ', '_');
-      const wikiData = await fetchWiki(searchTitle, date);
+    const fetchMovieData = async (title: string) => {
+      const searchTitle = title.replaceAll(' ', '%20');
+      const wikiData = await fetchWiki(searchTitle);
       setDescription(wikiData?.description);
       setWikiID(wikiData?.id);
       const imdbData = await fetchIMDB(searchTitle);
       setImdbID(imdbData);
     };
     if(name && releaseDate) 
-    if(name) (async () => await fetchMovieData(name, (releaseDate.slice(0, 4)) || ""))();
-  }, [name]);
+    if(name) (async () => await fetchMovieData(name))();
+  }, [movieModal.isOpen]);
 
   if (!movieModal.isOpen) return null;
 

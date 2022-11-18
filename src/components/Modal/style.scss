@@ -1,0 +1,102 @@
+.blocker {
+  position: fixed;
+  inset: 0 0 0 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.modal {
+  position: fixed;
+  position: fixed;
+  width: 95%;
+  max-width: 900px;
+  height: fit-content;
+  max-height: 100vh;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #555;
+  color: white;
+  padding: 2rem;
+  z-index: 1000;
+
+  .modal-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1rem;
+  }
+
+  .movie-poster {
+    width: Max(30%, 200px);
+    height: fit-content;
+  }
+  .modal-img {
+    width: 100%;
+  }
+  .right-side {
+    width: Max(60%, 300px);
+    .initial-info {
+      padding: 0 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .description {
+      max-height: 300px;
+      
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      .desc-loader {
+        background-image: url(https://small-buci.s3.eu-central-1.amazonaws.com/squirell.png);
+        background-position: center;
+        background-size: contain;
+        width: 10rem;
+        height: 10rem;
+        animation: spinner 2s linear infinite;
+      }
+    }
+  }
+  
+  .button-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0.5rem 0;
+    
+    .related-links {
+      padding-left: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    
+  a > span,
+    .similar-btn {
+      &:hover {
+        color: #555;
+        background-color: #eee;
+      }
+      transition: color 120ms ease;
+      border: 2px solid white;
+      padding: 0.5rem 1rem;
+      width: max-content;
+      color: white;
+      background: transparent;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+}
+  
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

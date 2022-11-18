@@ -1,0 +1,30 @@
+.header {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #333;
+}
+ .search-form {
+  width: fit-content;
+  position: relative;
+
+  .searchInput {
+    height: 3rem;
+    width: 250px;
+    padding: 0 1rem;
+  }
+
+  .search-btn {
+    cursor: pointer;
+    background: none;
+    position: absolute;
+    height: fit-content;
+    right: 0.5rem;
+    top: 50%;
+    translate: 0 -40%;
+    font-size: 2rem;
+    border: 0;
+    color: #333;
+  }
+}

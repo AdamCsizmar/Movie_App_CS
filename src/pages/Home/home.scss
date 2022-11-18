@@ -1,0 +1,35 @@
+.ws-wrapper {
+    width: 100%;
+    height: calc(100vh -100px); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0rem;
+    
+    .heading {
+        font-size: clamp(2rem, 8vw, 4rem);
+        line-height: clamp(2rem, 8vw, 4rem);
+        color: #eee;
+    }
+    
+    .loading {
+        transform: scale(0.75);
+        animation: spinner 4s infinite linear
+    }
+    
+    @keyframes spinner {
+        0% {
+            transform: rotate(0deg);
+        };
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+}
+
+    .search-state {
+        color: #eee;
+        text-align: center;
+        font-size: 1.5rem;
+    }

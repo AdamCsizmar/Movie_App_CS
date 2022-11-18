@@ -1,0 +1,68 @@
+[
+  {
+    "id": "856245",
+    "name": "To Kill the Beast",
+    "releaseDate": "2022-04-28T00:00:00.000Z",
+    "genres": [
+      {
+        "name": "Mystery"
+      },
+      {
+        "name": "Fantasy"
+      },
+      {
+        "name": "Thriller"
+      }
+    ],
+    "img": {
+      "url": "https://image.tmdb.org/t/p/w185_and_h278_bestv2/hAdkgE8lHelIQWpgrHk4wjEnbxQ.jpg"
+    },
+    "score": 5.722
+  },
+  {
+    "id": "9487",
+    "name": "A Bug's Life",
+    "releaseDate": "1998-11-25T00:00:00.000Z",
+    "genres": [
+      {
+        "name": "Adventure"
+      },
+      {
+        "name": "Animation"
+      },
+      {
+        "name": "Comedy"
+      },
+      {
+        "name": "Family"
+      }
+    ],
+    "img": {
+      "url": "https://image.tmdb.org/t/p/w185_and_h278_bestv2/Ah3J9OJVc2CNCuH2zMydXy9fmIC.jpg"
+    },
+    "score": 6.962
+  },
+  {
+    "id": "1010821",
+    "name": "Groot Takes a Bath",
+    "releaseDate": "2022-08-10T00:00:00.000Z",
+    "genres": [
+      {
+        "name": "Animation"
+      },
+      {
+        "name": "Family"
+      },
+      {
+        "name": "Comedy"
+      },
+      {
+        "name": "Science Fiction"
+      }
+    ],
+    "img": {
+      "url": "https://image.tmdb.org/t/p/w185_and_h278_bestv2/sN7FJP06TsNNtK9Jr77dc25yI82.jpg"
+    },
+    "score": 7.1
+  }
+]

@@ -5,11 +5,8 @@ const network = {
     imdb_searh_URL: process.env.REACT_APP_IMDB_SEARCH_URL || '',
     imdb_page_URL: process.env.REACT_APP_IMDB_PAGE_URL || '',
 
-    imdb_KEY: process.env.REACT_APP_IMDB_KEY || '',
-    imdb_KEY2: process.env.REACT_APP_IMDB_KEY2 || '',
-    imdb_KEY3: process.env.REACT_APP_IMDB_KEY3 || '',
     imdb_KEY4: process.env.REACT_APP_IMDB_KEY4 || '',
-    imdb_KEY5: 'k_chpatmd9',
+    imdb_KEY6: 'k_givgbtdd/',
 }
 
 export default network;

@@ -1,6 +1,6 @@
-import { ReactNode } from "react";
+import { Dispatch, ReactNode, SetStateAction } from "react";
 
-export type IMovieCard = {
+export type IMovieData = {
   id: string;
   name: string;
   releaseDate: string | null;
@@ -11,17 +11,18 @@ export type IMovieCard = {
   genres: [{ name: string }] | [];
 };
 
-
-
 export interface SearchOptions {
   searchedTitle?: string;
   similarToTitle?: string;
   isLoading: boolean;
 }
 
+export interface IMovieModal extends IMovieData {
+  setMovieModal?: Dispatch<SetStateAction<IMovieModal | null>>
+};
 
-export type IMovieModal = Partial<IMovieCard> & {
-  isOpen: boolean;
+export interface IMovieCard extends IMovieData {
+  setMovieModal: Dispatch<SetStateAction<IMovieModal | null>>
 };
 
 export type ReactChildrenNode = {

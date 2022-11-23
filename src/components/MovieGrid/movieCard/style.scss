@@ -36,6 +36,7 @@
     background-color: #fefefe;
     position: absolute;
     inset-inline: 0;
+    padding-inline: 0.5rem;
     bottom: 0;
 
     .main-info {
@@ -60,7 +61,7 @@
 .movie-info {
   display: flex;
   flex-direction: column;
-  padding-inline: 0.5rem;
+
 
   height: fit-content;
 

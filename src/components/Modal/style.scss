@@ -2,11 +2,10 @@
   position: fixed;
   inset: 0 0 0 0;
   z-index: 1000;
-  background: rgba(0, 0, 0, 0.06);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .modal {
-  position: fixed;
   position: fixed;
   width: 95%;
   max-width: 900px;
@@ -34,17 +33,21 @@
   .modal-img {
     width: 100%;
   }
+
   .right-side {
     width: Max(60%, 300px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
     .initial-info {
       padding: 0 0.5rem;
       margin-bottom: 1rem;
     }
     .description {
       width: 100%;
+      height: 100%;
       display: flex;
-      justify-content: center;
-      align-items: center;
 
       .desc-loader {
         background-image: url(https://small-buci.s3.eu-central-1.amazonaws.com/squirell.png);
@@ -55,39 +58,41 @@
         animation: spinner 2s linear infinite;
       }
     }
-  }
 
-  .button-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 0.5rem 0;
-
-    .related-links {
-      padding-left: 2rem;
+    .button-section {
+      width: 100%;
+      padding: 0.5rem 0;
       display: flex;
       flex-wrap: wrap;
-      gap: 2rem;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+  
+      .related-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+  
+      a, 
+      .similar-btn {
+        &:hover {
+          color: #555;
+          background-color: #eee;
+        }
+        transition: color 120ms ease;
+        color: white;
+        border: 2px solid white;
+        padding: 0.5rem 1rem;
+        width: max-content;
+        text-decoration: none;
+        background: transparent;
+        cursor: pointer;
+      }
     }
 
-    a > span,
-    .similar-btn {
-      &:hover {
-        color: #555;
-        background-color: #eee;
-      }
-      transition: color 120ms ease;
-      border: 2px solid white;
-      padding: 0.5rem 1rem;
-      width: max-content;
-      color: white;
-      background: transparent;
-      text-decoration: none;
-      cursor: pointer;
-    }
   }
+
 }
 
 @keyframes spinner {

@@ -1,7 +1,7 @@
-import { IMovieCard } from "../../../types/types";
+import { IMovieData } from "../../../types/types";
 import "./style.scss";
 
-const MainInfo = (props: IMovieCard) => {
+const MainInfo = (props: IMovieData) => {
     const { name, releaseDate, genres, score } = props;
     const scoreClass = score > 7 ? "green" : score > 5 ? "yellow" : "red";
   return (
@@ -13,9 +13,9 @@ const MainInfo = (props: IMovieCard) => {
           </h6>
         </div>
         <div className='additional-info'>
-          <p className='movie-genre'>{genres[0]?.name ?? "Unknown"}</p>
+          <p className='movie-genre'>{genres[0]?.name ?? "Unknown"}</p> 
           <p className={`movie-score ${scoreClass}`}>{score.toFixed(1)}</p>
-        </div>
+         </div>
       </div>
   )
 }

@@ -1,4 +1,3 @@
-import { MovieModal } from "../../components/Modal/MovieModal";
 import MovieContainer from "../../components/MovieGrid/MovieContainer";
 import { useContext } from "react";
 import { MovieContext } from "../../context/Context";
@@ -32,7 +31,7 @@ const Home = () => {
 export default Home;
 
 function WelcomeScreen() {
-  const { movies, searchOptions, setSearchOptions } = useContext(MovieContext);
+  const { movies, searchOptions } = useContext(MovieContext);
 
   let heading = "Search for a movie";
 
@@ -47,6 +46,7 @@ function WelcomeScreen() {
       <h1 className='heading'>{heading}</h1>
       <div className='image'>
         <img
+          alt="Squirell"
           src='https://small-buci.s3.eu-central-1.amazonaws.com/squirell.png'
           className={searchOptions.isLoading ? "loading" : ""}
         />

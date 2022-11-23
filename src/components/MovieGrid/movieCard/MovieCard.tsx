@@ -1,29 +1,31 @@
-import { IMovieCard, IMovieModal } from "../../../types/types";
 import "./style.scss";
-import { useContext } from "react";
-import { MovieContext } from "../../../context/Context";
 import MainInfo from "./MainInfo";
-import { MovieModal } from "../../Modal/MovieModal";
+import { IMovieCard } from "../../../types/types";
 
 export const MovieCard = (props: IMovieCard) => {
-  const { id, name, img, releaseDate, genres, score } = props;
-
-  const { movieModal, setMovieModal } = useContext(MovieContext);
-
-  const movieModalProps: IMovieModal = {
-    ...props,
-    isOpen: true,
-  };
+  const {
+    id,
+    name,
+    img,
+    releaseDate,
+    genres,
+    score,
+    setMovieModal,
+  } = props;
 
   const openModal = () => {
-    console.log("open modal");
-    setMovieModal(movieModalProps);
-    console.log("mod", movieModal);
+    setMovieModal!({
+      id: id,
+      name: name,
+      img: img,
+      releaseDate: releaseDate,
+      genres: genres,
+      score: score,
+    });
   };
 
   return (
     <>
-      <MovieModal isOpen={false} {...props}/>
       <div className='movie-card' onClick={openModal}>
         <div className='movie-poster'>
           <img

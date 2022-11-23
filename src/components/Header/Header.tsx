@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import searchMovies from "../../services/searchMovies";
 import { MovieContext } from "../../context/Context";
 import { BiSearchAlt } from "react-icons/bi";

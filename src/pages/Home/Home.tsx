@@ -10,8 +10,9 @@ const Home = () => {
     <>
       <div className='content-wrapper'>
         <div className='content'>
-          {!movies.length && <WelcomeScreen />}
-          {movies.length && (
+          {!movies.length ? (
+            <WelcomeScreen />
+          ) : (
             <>
               <h4 className='search-state'>
                 {searchOptions.searchedTitle &&
@@ -46,7 +47,7 @@ function WelcomeScreen() {
       <h1 className='heading'>{heading}</h1>
       <div className='image'>
         <img
-          alt="Squirell"
+          alt='Squirell'
           src='https://small-buci.s3.eu-central-1.amazonaws.com/squirell.png'
           className={searchOptions.isLoading ? "loading" : ""}
         />

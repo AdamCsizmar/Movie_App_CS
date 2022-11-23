@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 import MovieContextProvider from "./context/Context";
 import { Header } from "./components/Header/Header";
 import Home from "./pages/Home/Home";
